@@ -23,7 +23,7 @@ Por otro lado se dispone de la lista de productos comprados "lista_compra_id"
 por un cliente con sus códigos de productos
 
 Alumno, su objetivo es crear una lista nueva "lista_compra_productos" 
-que sea la transformación de la lista "lista_compra_ida",
+que sea la transformación de la lista "lista_compra_id",
 que en vez de estar tener los "ID" de los productos tenga el "nombre"
 de cada producto según su id.
 
@@ -62,5 +62,6 @@ if __name__ == '__main__':
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
+    lista_nombre_producto = [producto.get(id,'NaN') for id in lista_compra_id if id in lista_compra_id]
 
-    print("terminamos")
+    print(lista_nombre_producto)

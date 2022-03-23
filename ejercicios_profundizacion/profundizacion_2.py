@@ -45,4 +45,8 @@ if __name__ == '__main__':
     # Se espera obtener:
     # ['Tamara', 'Juan', 'Alberto'......]
 
+    nombres_filtrados = [i for i in nombres if i[0] in padron]
+
+    print(nombres_filtrados)
+
     print("terminamos")

@@ -35,11 +35,50 @@ BONUS Track: Realizar las modificaciones necesarias para que jueguen
 dos jugadores y compitan para ver quien sacá la suma de números
 más cercanos a 21 sin pasarse!
 '''
+import random
+
+def tirada(cantidad_cartas):
+    cartas = [random.randrange(1, 11) for i in range(cantidad_cartas)]
+    return cartas
+
+def jugador(jugador_num):
+    input(f'Enter para la primer tirada "JUGADOR {jugador_num}"\n')
+    lista_cartas = []
+    
+    lista_cartas = tirada(2)
+    
+    print(f'{lista_cartas} = {sum(lista_cartas)}')
+        
+    while sum(lista_cartas) <= 21:
+        user_si_no = input('¿Desea otra carta? 1-SI 2-NO ')
+        if user_si_no == '1':
+            for i in range(1):
+                cartas = random.randrange(1, 11) 
+                lista_cartas.append(cartas)
+                print(f'{lista_cartas} = {sum(lista_cartas)}')       
+        else:
+            print(f'"JUGADOR {jugador_num}" {lista_cartas} suman {sum(lista_cartas)}')            
+            break
+    else:
+        print(f'"JUGADOR {jugador_num}" {lista_cartas} = {sum(lista_cartas)} PERDIO')
+    return sum(lista_cartas)
 
 if __name__ == '__main__':
-    print("Ahora sí! buena suerte :)")
+    print("Ahora sí! buena suerte :)\n")
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
-
-
+    
+    puntaje_jugador_1 = jugador(1)
+    
+    puntaje_jugador_2 = jugador(2)
+    
+    if puntaje_jugador_1 > puntaje_jugador_2 and puntaje_jugador_1 <= 21:
+        print(f'"JUGADOR 1" es el ganador.')
+    elif puntaje_jugador_2 <= 21:
+        print(f'"JUGADOR 2" es el ganador.')
+    elif puntaje_jugador_1 > 21 and puntaje_jugador_2 > 21:
+        print(f'"JUGADOR 1" y "JUGADOR 2" perdieron.')
+    else:
+        print(f'"JUGADOR 1" es el ganador.')
+         
     print("terminamos")

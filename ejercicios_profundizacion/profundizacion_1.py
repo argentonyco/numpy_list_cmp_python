@@ -11,7 +11,7 @@
 # Requiere mayor tiempo de dedicación e investigación autodidacta.
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
-
+import random
 '''
 Enunciado:
 Empecemos a jugar con las listas y su métodos, el objetivo
@@ -32,5 +32,9 @@ if __name__ == '__main__':
     print('Comenzamos a divertirnos!')
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
+    
+    list_3 = [random.randrange(1, 11) for i in range(3)]
+    
+    suma_lista_3 = [print(list_3, sum(list_3),'Felicitaciones') if sum(list_3) <= 21 else print('perdió')]
 
     print("terminamos")

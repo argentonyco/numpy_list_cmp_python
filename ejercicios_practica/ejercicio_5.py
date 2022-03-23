@@ -29,7 +29,11 @@ if __name__ == '__main__':
     # comprendido en dicho rango pasó por ese molinete
 
     # personal_1_10 = [.....]
-
+    
+    personal_1_10 = [id for id in accesos if id <= 10]
+    contador_molinete = len(personal_1_10)
+    print(f'{personal_1_10} Pasaron {contador_molinete} personas del personal\n')
+    
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
     # cuyo ID de personal esté dentro de los ID válidos para ingresar
@@ -40,6 +44,8 @@ if __name__ == '__main__':
     # TIP: Utilizar el operador "in" para chequear si un ID de accesos está
     # dentro de "id_validos"
 
-    # personal_valido = [.....]
+    personal_valido = [id for id in accesos if id in id_validos]
 
+    print(personal_valido)
+    
     print("terminamos")

@@ -36,7 +36,7 @@ def numpy_where_diff():
     l1 = list(range(10))
     v1 = np.asanyarray(l1)
 
-    # Crear un nuevo array que solo tengo los numeros
+    # Crear un nuevo array que solo tenga los numeros
     # mayores a 3 del array numy y los demás reemplazar por cero
     # where(condicion, returno verdadero, retorno falso)
     where_v1 = np.where(v1 > 3, v1, 0)

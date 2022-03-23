@@ -32,7 +32,7 @@ def metodos_numpy_vs_list():
     time2 = time.time()
     numpy_time_ms = (time2-time1)*1000
     print('Numpy time: {:.2f}ms'.format(numpy_time_ms))
-
+    
     time1 = time.time()
     sum(l1)
     time2 = time.time()
